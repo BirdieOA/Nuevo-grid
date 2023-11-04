@@ -1,0 +1,159 @@
+:root {
+  --uno: #3f668a;
+  --dos: #c87195;
+  --tres: #fb8ab9;
+  --cuatro: #7b95b0;
+  --cinco: #fefee6;
+  --seis: #0f172a;
+}
+
+body {
+  background: var(--seis);
+  color: var(--cinco);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 1rem 10rem;
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin: 1rem 2rem;
+  }
+}
+
+header {
+  background-color: var(--uno);
+  border-radius: 50px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 1240px;
+}
+
+.items {
+  display: flex;
+  gap: 3rem;
+}
+
+a {
+  color: var(--cinco);
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  height: 450px;
+  max-width: 1300px;
+  margin: 0.5rem auto;
+}
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 75% 1fr;
+  }
+}
+
+.container-dos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  height: 450px;
+  max-width: 1300px;
+  margin: 0.5rem auto;
+}
+@media (min-width: 1024px) {
+  .container-dos {
+    grid-template-columns: 1fr 75%;
+  }
+}
+
+.izquierda {
+  background: var(--cuatro);
+  padding: 16px 32px;
+  border-radius: 24px;
+  
+}
+
+.derecha {
+  background-color: var(--dos);
+  padding: 16px 32px;
+  border-radius: 24px;
+ 
+}
+
+.redes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 0 auto;
+  
+}
+
+/* ANIMACIONES IZQUIERDA */
+.ancores-left {
+  background: var(--tres);
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 999px;
+  margin: 0 0.2rem;
+  transform: translateX(-600%);
+  animation: slideInFromLeft 1s forwards;
+  animation-delay: calc(0.5s * var(--index));
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-600%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ANIMACIONES DERECHA */
+.ancores-right {
+  background: var(--tres);
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 999px;
+  margin: 0 0.2rem;
+  transform: translateX(600%);
+  animation: slideInFromRight 1s forwards;
+  animation-delay: calc(0.5s * var(--index));
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(600%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.pie{
+  background-color: var(--uno);
+  border-radius: 50px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 1240px;
+}
+
+::-webkit-scrollbar{
+  width: .8rem;
+
+}
+
+::-webkit-scrollbar-thumb{
+  background:var(--cinco);
+  border-radius: 10px;
+}
