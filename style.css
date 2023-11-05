@@ -22,7 +22,7 @@ body {
   }
 }
 
-header {
+.navegacion {
   background-color: var(--uno);
   border-radius: 50px;
   padding: 16px 32px;
@@ -33,6 +33,33 @@ header {
   margin-top: 1rem;
   text-align: center;
   max-width: 1240px;
+  animation: subeNavegacion .8s forwards;
+  animation-delay: calc(0.5s);
+}
+
+@keyframes subeNavegacion {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* ANIMACION PARA .CONTAINER .CONTAINER-DOS */
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .items {
@@ -44,7 +71,7 @@ a {
   color: var(--cinco);
   text-decoration: none;
 }
-
+/* 🟣 COMPARTE KEYFRAME CON .NAVEGACION  slideInFromBottom*/
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -52,13 +79,15 @@ a {
   height: 450px;
   max-width: 1300px;
   margin: 0.5rem auto;
+  animation: slideInFromBottom 1s forwards;
+  animation-delay: calc(0.8s);
 }
 @media (min-width: 1024px) {
   .container {
     grid-template-columns: 75% 1fr;
   }
 }
-
+/* 🟣 COMPARTE KEYFRAME CON .NAVEGACION slideInFromBottom*/
 .container-dos {
   display: grid;
   grid-template-columns: 1fr;
@@ -66,6 +95,8 @@ a {
   height: 450px;
   max-width: 1300px;
   margin: 0.5rem auto;
+  animation: slideInFromBottom 1s forwards;
+  animation-delay: calc(0.8s);
 }
 @media (min-width: 1024px) {
   .container-dos {
@@ -77,21 +108,32 @@ a {
   background: var(--cuatro);
   padding: 16px 32px;
   border-radius: 24px;
-  
 }
-
+/* 🟠 CONTIENE UN KEYFRAME SOLO  slideFromBottom */
 .derecha {
   background-color: var(--dos);
   padding: 16px 32px;
   border-radius: 24px;
- 
+  animation: slideFromBottom 1s forwards;
+  animation-delay: calc(.8s);
+}
+
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .redes {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   margin: 0 auto;
-  
+  overflow: hidden;
 }
 
 /* ANIMACIONES IZQUIERDA */
@@ -99,7 +141,7 @@ a {
   background: var(--tres);
   padding: 8px 0;
   text-align: center;
-  border-radius: 999px;
+  border-radius: 50px;
   margin: 0 0.2rem;
   transform: translateX(-600%);
   animation: slideInFromLeft 1s forwards;
@@ -120,7 +162,7 @@ a {
   background: var(--tres);
   padding: 8px 0;
   text-align: center;
-  border-radius: 999px;
+  border-radius: 50px;
   margin: 0 0.2rem;
   transform: translateX(600%);
   animation: slideInFromRight 1s forwards;
@@ -136,7 +178,7 @@ a {
   }
 }
 
-.pie{
+.pie {
   background-color: var(--uno);
   border-radius: 50px;
   padding: 16px 32px;
@@ -148,12 +190,11 @@ a {
   max-width: 1240px;
 }
 
-::-webkit-scrollbar{
-  width: .8rem;
-
+::-webkit-scrollbar {
+  width: 0.8rem;
 }
 
-::-webkit-scrollbar-thumb{
-  background:var(--cinco);
+::-webkit-scrollbar-thumb {
+  background: var(--cinco);
   border-radius: 10px;
 }
