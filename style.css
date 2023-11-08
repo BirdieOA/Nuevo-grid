@@ -65,6 +65,8 @@ body {
 .items {
   display: flex;
   gap: 3rem;
+ 
+  
 }
 
 a {
@@ -145,7 +147,7 @@ a {
   margin: 0 0.2rem;
   transform: translateX(-600%);
   animation: slideInFromLeft 1s forwards;
-  animation-delay: calc(0.5s * var(--index));
+  animation-delay: calc(1s * var(--index));
 }
 
 @keyframes slideInFromLeft {
@@ -166,7 +168,7 @@ a {
   margin: 0 0.2rem;
   transform: translateX(600%);
   animation: slideInFromRight 1s forwards;
-  animation-delay: calc(0.5s * var(--index));
+  animation-delay: calc(1s * var(--index));
 }
 
 @keyframes slideInFromRight {
@@ -189,6 +191,7 @@ a {
   text-align: center;
   max-width: 1240px;
 }
+
 
 ::-webkit-scrollbar {
   width: 0.8rem;
